@@ -1,7 +1,5 @@
 # Undefined
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/red-explpsion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explpsion/undefined)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/red-explpsion/undefined/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/red-explpsion/undefined/actions/workflows/tests.yaml?query=branch:main)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/red-explpsion/undefined/coding-standards.yml?label=code%20style&style=flat-square)](https://github.com/red-explpsion/undefined/actions/workflows/coding-standards.yml?query=branch:main)
