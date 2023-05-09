@@ -19,8 +19,8 @@ final class Handler extends ExceptionHandler
     {
         parent::__construct(container: $container);
 
-        $dontFlash = config(key: 'undefined.dont_flash');
-        $dontReport = config(key: 'undefined.dont_report');
+        $dontFlash = config(key: 'undefined.dont_flash', default: []);
+        $dontReport = config(key: 'undefined.dont_report', default: []);
 
         $this->dontFlash = is_array($dontFlash) ? $dontFlash : [];
         $this->dontReport = is_array($dontReport) ? $dontReport : [];
