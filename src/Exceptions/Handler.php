@@ -20,7 +20,7 @@ final class Handler extends ExceptionHandler
         parent::__construct(container: $container);
 
         $dontFlash = config(key: 'undefined.dont_flash');
-        $dontReport = config('undefined.dont_report');
+        $dontReport = config(key: 'undefined.dont_report');
 
         $this->dontFlash = is_array($dontFlash) ? $dontFlash : [];
         $this->dontReport = is_array($dontReport) ? $dontReport : [];
@@ -31,5 +31,13 @@ final class Handler extends ExceptionHandler
      */
     public function register(): void
     {
+        $reportables = config(key: 'undefined.reportables', default: []);
+        $renderables = config(key: 'undefined.renderables', default: []);
+
+        collect(value: is_array($reportables) ? $reportables : [])
+            ->each(fn (callable $reportUsing) => $this->reportable(reportUsing: $reportUsing));
+
+        collect(value: is_array($renderables) ? $renderables : [])
+            ->each(fn (callable $renderUsing) => $this->renderable(renderUsing: $renderUsing));
     }
 }
