@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace RedExplosion\Skeleton;
+namespace RedExplosion\Undefined;
 
 use Illuminate\Support\ServiceProvider;
 
-final class SkeletonServiceProvider extends ServiceProvider
+final class UndefinedServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
         $this->mergeConfigFrom(
-            path: __DIR__ . '/../config/skeleton.php',
-            key: 'skeleton',
+            path: __DIR__ . '/../config/undefined.php',
+            key: 'undefined',
         );
     }
 
@@ -21,9 +21,9 @@ final class SkeletonServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes(
                 paths: [
-                    __DIR__ . '/../config/skeleton.php' => config_path('skeleton.php'),
+                    __DIR__ . '/../config/undefined.php' => config_path('undefined.php'),
                 ],
-                groups: 'skeleton-config',
+                groups: 'undefined-config',
             );
         }
     }
