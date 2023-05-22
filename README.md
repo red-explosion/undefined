@@ -1,7 +1,7 @@
 # Undefined
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/red-explosion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explosion/undefined)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/red-explosion/undefined/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/red-explosion/undefined/actions/workflows/tests.yaml?query=branch:main)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/red-explosion/undefined/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/red-explosion/undefined/actions/workflows/tests.yaml?query=branch:main)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/red-explosion/undefined/coding-standards.yml?label=code%20style&style=flat-square)](https://github.com/red-explosion/undefined/actions/workflows/coding-standards.yml?query=branch:main)
 [![Total Downloads](https://img.shields.io/packagist/dt/red-explosion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explosion/undefined)
 
