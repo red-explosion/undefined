@@ -1,9 +1,9 @@
 # Undefined
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/red-explpsion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explpsion/undefined)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/red-explpsion/undefined/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/red-explpsion/undefined/actions/workflows/tests.yaml?query=branch:main)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/red-explpsion/undefined/coding-standards.yml?label=code%20style&style=flat-square)](https://github.com/red-explpsion/undefined/actions/workflows/coding-standards.yml?query=branch:main)
-[![Total Downloads](https://img.shields.io/packagist/dt/red-explpsion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explpsion/undefined)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/red-explosion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explosion/undefined)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/red-explosion/undefined/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/red-explosion/undefined/actions/workflows/tests.yaml?query=branch:main)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/red-explosion/undefined/coding-standards.yml?label=code%20style&style=flat-square)](https://github.com/red-explosion/undefined/actions/workflows/coding-standards.yml?query=branch:main)
+[![Total Downloads](https://img.shields.io/packagist/dt/red-explosion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explosion/undefined)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -12,7 +12,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require red-explpsion/undefined
+composer require red-explosion/undefined
 ```
 
 You can publish the config file with:
