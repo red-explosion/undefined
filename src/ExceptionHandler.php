@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace RedExplosion\Undefined\Exceptions;
+namespace RedExplosion\Undefined;
 
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Foundation\Exceptions\Handler;
 
-class Handler extends ExceptionHandler
+class ExceptionHandler extends Handler
 {
     /**
      * Create a new exception handler instance.
