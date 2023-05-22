@@ -5,7 +5,9 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/red-explosion/undefined/coding-standards.yml?label=code%20style&style=flat-square)](https://github.com/red-explosion/undefined/actions/workflows/coding-standards.yml?query=branch:main)
 [![Total Downloads](https://img.shields.io/packagist/dt/red-explosion/undefined.svg?style=flat-square)](https://packagist.org/packages/red-explosion/undefined)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Undefined for Laravel takes care of formatting exceptions and errors into nicely formatted JSON responses.
+
+> Note: This package is still a Work in Progress and things may change.
 
 ## Installation
 
@@ -23,9 +25,23 @@ php artisan vendor:publish --tag="undefined-config"
 
 ## Usage
 
+In order to use Undefined, you need to replace your exception handler. Replace the following in your
+`bootstrap/app.php` file:
+
 ```php
-$variable = new RedExplosion\Undefined();
-echo $variable->echoPhrase('Hello, RedExplosion!');
+$app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    App\Exceptions\Handler::class
+);
+```
+
+with the following:
+
+```php
+$app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    RedExplosion\Undefined\ExceptionHandler::class
+);
 ```
 
 ## Testing
