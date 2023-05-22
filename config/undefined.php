@@ -51,6 +51,8 @@ return [
     |
     */
 
-    'renderables' => [],
+    'renderables' => [
+        \RedExplosion\Undefined\Renderables\NotFoundHttpExceptionRenderable::class,
+    ],
 
 ];

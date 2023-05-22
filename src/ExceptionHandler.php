@@ -35,11 +35,11 @@ class ExceptionHandler extends Handler
         $renderables = (array) config(key: 'undefined.renderables', default: []);
 
         collect(value: $reportables)
-            ->map(fn ($reportable) => fn () => new $reportable())
-            ->each(fn (callable $reportUsing) => $this->reportable(reportUsing: $reportUsing));
+            // @phpstan-ignore-next-line
+            ->each(fn (string $reportable) => $this->reportable(reportUsing: new $reportable()));
 
         collect(value: $renderables)
-            ->map(fn ($renderable) => fn () => new $renderable())
-            ->each(fn (callable $renderUsing) => $this->renderable(renderUsing: $renderUsing));
+            // @phpstan-ignore-next-line
+            ->each(fn (string $renderable) => $this->renderable(renderUsing: new $renderable()));
     }
 }
