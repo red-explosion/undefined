@@ -52,6 +52,7 @@ return [
     */
 
     'renderables' => [
+        \RedExplosion\Undefined\Renderables\AuthenticationExceptionRenderable::class,
         \RedExplosion\Undefined\Renderables\NotFoundHttpExceptionRenderable::class,
     ],
 

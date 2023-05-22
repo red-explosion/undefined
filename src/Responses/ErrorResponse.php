@@ -13,7 +13,8 @@ class ErrorResponse implements Responsable
 {
     public function __construct(
         public readonly ErrorTypeEnum $errorType,
-        public readonly ?string $message,
+        public readonly string $message,
+        public readonly int $status = 200,
     ) {
     }
 
@@ -26,7 +27,7 @@ class ErrorResponse implements Responsable
                     'message' => $this->message,
                 ],
             ],
-            status: 200, // TODO: needs to be dynamic
+            status: $this->status,
         );
     }
 }
