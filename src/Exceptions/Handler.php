@@ -31,13 +31,15 @@ final class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $reportables = config(key: 'undefined.reportables', default: []);
-        $renderables = config(key: 'undefined.renderables', default: []);
+        $reportables = (array) config(key: 'undefined.reportables', default: []);
+        $renderables = (array) config(key: 'undefined.renderables', default: []);
 
-        collect(value: is_array($reportables) ? $reportables : [])
+        collect(value: $reportables)
+            ->map(fn ($reportable) => fn () => new $reportable())
             ->each(fn (callable $reportUsing) => $this->reportable(reportUsing: $reportUsing));
 
-        collect(value: is_array($renderables) ? $renderables : [])
+        collect(value: $renderables)
+            ->map(fn ($renderable) => fn () => new $renderable())
             ->each(fn (callable $renderUsing) => $this->renderable(renderUsing: $renderUsing));
     }
 }
