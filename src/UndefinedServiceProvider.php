@@ -6,7 +6,7 @@ namespace RedExplosion\Undefined;
 
 use Illuminate\Support\ServiceProvider;
 
-final class UndefinedServiceProvider extends ServiceProvider
+class UndefinedServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
