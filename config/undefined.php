@@ -55,6 +55,7 @@ return [
         \RedExplosion\Undefined\Renderables\AccessDeniedHttpExceptionRenderable::class,
         \RedExplosion\Undefined\Renderables\AuthenticationExceptionRenderable::class,
         \RedExplosion\Undefined\Renderables\NotFoundHttpExceptionRenderable::class,
+        \RedExplosion\Undefined\Renderables\ValidationExceptionRenderable::class,
     ],
 
 ];
