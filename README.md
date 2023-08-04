@@ -7,7 +7,9 @@
 
 Undefined for Laravel takes care of formatting exceptions and errors into nicely formatted JSON responses.
 
-> Note: This package is still a Work in Progress and things may change.
+> **Warning**
+> Package is in early stages of development. It means there may be bugs and API is very likely to change. Create an
+> issue if you spot a bug. Ideas are welcome.
 
 ## Installation
 

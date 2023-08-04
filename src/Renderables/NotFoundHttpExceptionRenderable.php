@@ -13,14 +13,12 @@ class NotFoundHttpExceptionRenderable
 {
     public function __invoke(NotFoundHttpException $exception, Request $request): ErrorResponse|null
     {
-        if ($request->expectsJson()) {
-            return new ErrorResponse(
-                errorType: ErrorTypeEnum::InvalidRequestError,
-                message: "Unrecognised request URL ({$request->method()} /{$request->path()}).",
-                status: 404,
-            );
-        }
+        $path = $request->path() !== '/' ? "/{$request->path()}" : '/';
 
-        return null;
+        return new ErrorResponse(
+            errorType: ErrorTypeEnum::InvalidRequestError,
+            message: "Unrecognised request URL ({$request->method()} $path).",
+            status: 404,
+        );
     }
 }

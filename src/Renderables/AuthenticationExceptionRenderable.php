@@ -13,7 +13,7 @@ class AuthenticationExceptionRenderable
 {
     public function __invoke(AuthenticationException $exception, Request $request): ErrorResponse|null
     {
-        if ($request->expectsJson()) {
+        if (! $request->bearerToken()) {
             return new ErrorResponse(
                 errorType: ErrorTypeEnum::InvalidRequestError,
                 message: 'You did not provide an API key. You need to provide your API key in the Authorization header, using Bearer auth (e.g. `Authorization: Bearer YOUR_SECRET_KEY`).',
@@ -21,6 +21,10 @@ class AuthenticationExceptionRenderable
             );
         }
 
-        return null;
+        return new ErrorResponse(
+            errorType: ErrorTypeEnum::InvalidRequestError,
+            message: "Invalid API Key provided: {$request->bearerToken()}",
+            status: 401,
+        );
     }
 }

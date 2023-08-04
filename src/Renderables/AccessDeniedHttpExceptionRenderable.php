@@ -13,14 +13,10 @@ class AccessDeniedHttpExceptionRenderable
 {
     public function __invoke(AccessDeniedHttpException $exception, Request $request): ErrorResponse|null
     {
-        if ($request->expectsJson()) {
-            return new ErrorResponse(
-                errorType: ErrorTypeEnum::InvalidRequestError,
-                message: 'The provided key does not have the required permissions for this endpoint.',
-                status: 401,
-            );
-        }
-
-        return null;
+        return new ErrorResponse(
+            errorType: ErrorTypeEnum::InvalidRequestError,
+            message: 'The provided key does not have the required permissions for this endpoint.',
+            status: 401,
+        );
     }
 }
