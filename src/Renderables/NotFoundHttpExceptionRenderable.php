@@ -17,7 +17,7 @@ class NotFoundHttpExceptionRenderable
 
         return new ErrorResponse(
             errorType: ErrorTypeEnum::InvalidRequestError,
-            message: "Unrecognised request URL ({$request->method()} $path).",
+            message: "Unrecognised request URL ({$request->method()} {$path}).",
             status: 404,
         );
     }
